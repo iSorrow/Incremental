@@ -1,49 +1,129 @@
-<span id="gold"></span>
-
-<div id="container">
-    <div id="header" style="background-color:purple;">
-        
-<h1 style="margin-bottom:0;">Test Incremental</h1>
-
-    </div>
-    <div id="menudiv" style="display:none;width:100px;height:100%;min-height:100%;float:left;background-color:#EEEEEE;">
-        <div id="mineswitch">
-            <button onclick="SwitchMainDiv(0)">The Mine</button>
+<body>
+<div class="container" align="center">
+<span id="currentPokemon"><strong>Welcome to Test Incremental!</span><br>
+<span id="cash">0</span></strong><i>Poke.</i><br><br>
+<div class="getTab" onclick="tabOne()">Pokemon</div>
+<div class="getTab" onclick="tabTwo()">Pokemart</div>
+<div class="getTab" onclick="tabThree()">Stats</div>
+<div class="getTab" onclick="tabFour()">Options</div>
+<div id="tabOne" class="tab">
+    <div class="getTabTabs" onclick="tabOneWater()">Water-Types</div>
+    <div class="getTabTabs" onclick="tabOneEarth()">Earth-Types</div>
+    <div class="getTabTabs" onclick="tabOneFly()">Flying-Types</div>
+    <div id="tabOneWater" class = "fishTab">
+    <table class="table">
+        <tr>
+        		<td id="squirtleTD"><img src="fritter.png" width ="128" height="128" align="left">Squirtle
+        			<br>You Own: <span id="squirtleQNT">0</span>
+        			<br>Male: <span class ="male" id="squirtleMales">0</span> Female: <span class = "female" id="squirtleFemales">0</span>
+        			<br>Sell Value: <span id="squirtleSellPrice">1</span><strong><i> Poke.</i></strong>
+        			<br>Breeding Chance: <span id="squirtleBreedRate">0</span><br>
+        			<button onclick="sellMale('squirtle')" class="sellMale">Sell Male</button><br>
+        			<button onclick="sellFemale('squirtle')" class="sellFemale">Sell Female</button><br><br>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td id="marillTD"><img src="fritter.png" width ="128" height="128" align="left">Marill
+        			<br>You Own: <span id="marillQNT">0</span>
+        			<br>Male: <span class ="male" id="marillMales">0</span> Female: <span class = "female" id="marillFemales">0</span>
+        			<br>Sell Value: <span id="marillMSellPrice">5</span><strong><i> Poke.</i></strong>
+        			<br>Breeding Chance: <span id="marillRepRate">0</span><br>
+        			<button onclick="sellMale('marill')" class="sellMale">Sell Male</button><br>
+        			<button onclick="sellFemale('marill')" class="sellFemale">Sell Female</button><br><br>
+        		</td>
+        	</tr>
+        	</table>
+    	</div>
+    	<div id="tabOneEarth" class = "tab">
+    	<table class="table">
+        	<tr>
+        		<td id="larvitarTD"><img src="fritter.png" width ="128" height="128" align="left">Larvitar
+        			<br>You Own: <span id="larvitarAmt">0</span>
+        			<br>Male: <span class ="male" id="larvitarMales">0</span> Female: <span class = "female" id="larvitarFemales">0</span>
+        			<br>Sell Value: <span id="larvitarSellPrice">5</span><strong><i> Poke.</i></strong>
+        			<br>Breeding Chance: <span id="larvitarRepRate">0</span><br>
+        			<button onclick="sellMale('larvitar')" class="sellMale">Sell Male</button><br>
+        			<button onclick="sellFemale('larvitar')" class="sellFemale">Sell Female</button><br><br>
+        		</td>
+        	</tr>
+        	<tr>
+        		<td id="sandshrewTD"><img src="fritter.png" width ="128" height="128" align="left">Sandshrew
+        			<br>You Own: <span id="sandshrewAmt">0</span>
+        			<br>Male: <span class ="male" id="sandshrewMales">0</span> Female: <span class = "female" id="sandshrewFemales">0</span>
+        			<br>Sell Value: <span id="sandshrewSellPrice">10</span><strong><i> Poke.</i></strong>
+        			<br>Breeding Chance: <span id="sandshrewRepRate">0</span><br>
+        			<button onclick="sellMale('sandshrew')" class="sellMale">Sell Male</button><br>
+        			<button onclick="sellFemale('sandshrew')" class="sellFemale">Sell Female</button><br><br>
+        		</td>
+        	</tr>
+        	</table>
         </div>
-    </div>
-    <div id="Options" style="background-color:violet;height:600px;width:100px;float:left;">
-        <p><strong>Options</strong>
-
-            <br>
-            <button onclick="New()">New Game</button>
-            </br>
-            <button onclick="Save()">Save Game</button>
-            <br>
-            <button onclick="Load()">Load Game</button>
-            <br>
-            <button onclick="Reset()">Reset Game</button>
-            </br>
-            <button onclick="Extras">Extras</button>
-        </p>
-    </div>
-    <div id="content" style="background-color:#EEEEEE;height:600px">Content goes here</div>
-    <div id="footer" style="background-color:black;clear:both;text-align:center;color:white;">Copyright © iSorrow, 2014 - Version 0.1</div>
+        <div id="tabOneFlying" class = "tab">
+        <table class="table">
+        	<tr>
+        		<td id="pidgeyTD"><img src="fritter.png" width ="128" height="128" align="left">Pidgey
+        			<br>You Own: <span id="pidgeyAmt">0</span>
+        			<br>Male: <span class ="male" id="pidgeyMales">0</span> Female: <span class = "female" id="pidgeyFemales">0</span>
+        			<br>Sell Value: <span id="pidgeySellPrice">10</span><strong><i> Poke.</i></strong>
+        			<br>Breeding Chance: <span id="pidgeyRepRate">0</span><br>
+        			<button onclick="sellMale('pidgey')" class="sellMale">Sell Male</button><br>
+        			<button onclick="sellFemale('pidgey')" class="sellFemale">Sell Female</button><br><br>
+        		</td>
+        	</tr>
+        	
+        	<tr>
+        		<td id="noibatTD"><img src="fritter.png" width ="128" height="128" align="left">Noibat
+        			<br>You Own: <span id="noibatAmt">0</span>
+        			<br>Male: <span class ="male" id="noibatMales">0</span> Female: <span class = "female" id="noibatFemales">0</span>
+        			<br>Sell Value: <span id="noibatSellPrice">15</span><strong><i> Poke.</i></strong>
+        			<br>Breeding Chance: <span id="noibatRepRate">0</span><br>
+        			<button onclick="sellMale('noibat')" class="sellMale">Sell Male</button><br>
+        			<button onclick="sellFemale('noibat')" class="sellFemale">Sell Female</button><br><br>
+        		</td>
+        	</tr>
+        	</table>
+        </div>	
+    	
 </div>
-<div id="minediv" style="display:none;float:left;">
-<b>The Mine</b>
-
-    <div id="minesources"></div>
+<div id="tabTwo" class="tab">
+<table class="table">
+<br>Pokemart!<br>
+<tr>
+    		<br><td id="itemTD">Good Rod
+    			<br>You Own: <span id="rods">0</span>
+    			<br>Price: <span id="rodsBuyPrice">1</span><strong><i> Poke.</i></strong><br>
+    			<button onclick="buyitem('rods')" class="buyitem"><strong>Buy</strong></button><br>
+    			<button onclick="fishing()" class="setitem"><strong><span id = "fishing">Go Fishing!</span></strong></button><br><br>
+    		</td>
+    	</tr>
+    	<tr>
+    		<td id="itemTD">Great Balls
+    			<br>You Own: <span id="traps">0</span>
+    			<br>Price: <span id="greatballBuyPrice">5</span><strong><i> Poke.<i></strong><br>
+    			<button onclick="buyitem('greatball')" class="buyitem"><strong>Buy</strong></button><br>
+    			<button onclick="setitem('greatball')" class="setitem"><strong>Throw Great Balls</strong></button><br><br>
+    		</td>
+    	</tr>
+    	
+    	<tr>
+    		<td id="itemTD">Pokeflute
+    			<br>You Own: <span id="pokeFlute">0</span>
+    			<br>Price: <span id="pokeFluteBuyPrice">10</span><strong><i> Poke.</i></strong><br>
+    			<button onclick="buyitem('pokeFlute')" class="buyitem"><strong>Buy</strong></button><br>
+    			<button onclick="setitem('pokeFlute')" class="setitem"><strong>Use Pokeflute?</strong></button><br><br>
+    		</td>
+    	</tr>
+	</table>
 </div>
-<script>
-    //Declare variables here.
-</script>
-<script>
-    //Declare initial unlocks here.
-    function DefaultUnlocks() {
-        weapon["banana"]
-        shield["dungShield"]
-        gold["500g"]
-    }
-
-    DefaultUnlocks();
-</script>
+<div id="tabThree" class="tab">
+    <div align="left">
+        <p id="pokemartLevel">Pokemart level: <span id="pokemartLevel">1</span><br>
+        You have <span id="pokemartXP">0</span> pokemart experience<br>
+        You need <span id="pokemartXPNeeded">20</span> experience to level up!
+        <br><br>
+        Pokemon Caught: <span id="numPokemonCaught"></span><br>
+        Time played: <span id="timePlayed"></span> seconds<br>
+        Items bought: <span id="itemsBought">0</span>
+    </div>
+</div>
+<div id="tabFour" class="tab"><br><strong>(The game should automatically save every 10 seconds.)</strong><br>
