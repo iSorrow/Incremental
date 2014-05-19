@@ -1,0 +1,49 @@
+<span id="gold"></span>
+
+<div id="container">
+    <div id="header" style="background-color:purple;">
+        
+<h1 style="margin-bottom:0;">Test Incremental</h1>
+
+    </div>
+    <div id="menudiv" style="display:none;width:100px;height:100%;min-height:100%;float:left;background-color:#EEEEEE;">
+        <div id="mineswitch">
+            <button onclick="SwitchMainDiv(0)">The Mine</button>
+        </div>
+    </div>
+    <div id="Options" style="background-color:violet;height:600px;width:100px;float:left;">
+        <p><strong>Options</strong>
+
+            <br>
+            <button onclick="New()">New Game</button>
+            </br>
+            <button onclick="Save()">Save Game</button>
+            <br>
+            <button onclick="Load()">Load Game</button>
+            <br>
+            <button onclick="Reset()">Reset Game</button>
+            </br>
+            <button onclick="Extras">Extras</button>
+        </p>
+    </div>
+    <div id="content" style="background-color:#EEEEEE;height:600px">Content goes here</div>
+    <div id="footer" style="background-color:black;clear:both;text-align:center;color:white;">Copyright © iSorrow, 2014 - Version 0.1</div>
+</div>
+<div id="minediv" style="display:none;float:left;">
+<b>The Mine</b>
+
+    <div id="minesources"></div>
+</div>
+<script>
+    //Declare variables here.
+</script>
+<script>
+    //Declare initial unlocks here.
+    function DefaultUnlocks() {
+        weapon["banana"]
+        shield["dungShield"]
+        gold["500g"]
+    }
+
+    DefaultUnlocks();
+</script>
